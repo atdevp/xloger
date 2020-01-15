@@ -1,0 +1,36 @@
+{
+    "xlog_node": {
+        "ip": "1.1.1.1",
+        "port": 8687,
+        "storage_path": "/tmp/xlog_storage",
+        "rsa_filepath": "/Users/ad/.ssh/id_rsa"
+    },
+    "mysql": {
+        "dsn": "root@tcp(localhost:3306)/xloger?charset=utf8&parseTime=true&loc=Asia%2fShanghai&readTimeout=25000s&writeTimeout=25000s",
+        "idle": 10,
+        "max": 20,
+        "log_model": true
+    },
+    "hdfs": {
+        "namenodes": [
+            "hdfs1.abc.com:8020",
+            "hdfs2.abc.com:8020"
+        ],
+        "customize_conf": "/opt/work/hadoop_conf",
+        "default_conf": "/etc/hadoop/conf",
+        "default_krb_conf": "/etc/krb5.conf"
+    },
+    "alarm": {
+        "api": "http://alarm.abc.com/weixin/alarm",
+        "users": {
+            "user1": 11111111111,
+            "user2": 11111111112
+        },
+        "interval": 5, 
+        "max": 10
+    },
+    "upstream": {
+        "api": "http://upstream.abc.com/api/job/report_status/"
+    },
+    "sync_db_interval": 60
+}
